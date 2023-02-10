@@ -140,11 +140,6 @@ function EmployeeData() {
     });
 }
 
-
-
-
-
-
 function init() {
     managerData();
 }
