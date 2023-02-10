@@ -1,9 +1,8 @@
 const fs = require('fs'); 
-const inquire = require('inquirer');
+const inquirer = require('inquirer');
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
-const { default: inquirer } = require('inquirer');
 
 const workers = []; 
 let manager; 
@@ -108,9 +107,9 @@ function EmployeeData() {
     ]).then(answers => {
         if (answers.employeeRole === "Intern") {
             const employee = new Intern(answers.employeeName, answers.employeeId, answers.employeeEmail, answers.school);
-            teamMembers.push(employee);
+            workers.push(employee);
         } else if (answers.employeeRole === "Engineer") {
-            teamMembers.push(new Engineer(answers.employeeName, answers.employeeId, answers.employeeEmail, answers.github));
+            workers.push(new Engineer(answers.employeeName, answers.employeeId, answers.employeeEmail, answers.github));
         }
         if (answers.newEmployee === true) {
             EmployeeData();
@@ -127,14 +126,14 @@ function EmployeeData() {
             managerCard = managerCard.replace('{{officeNumber}}', manager.getOfficeNumber());
 
             var cards = managerCard; 
-            for (var i = 0; i < teamMembers.length; i++) {
-                var employee = teamMembers[i];
+            for (var i = 0; i < workers.length; i++) {
+                var employee = workers[i];
                 cards += render(employee);
             }
 
             main = main.replace('{{cards}}', cards);
 
-            fs.writeFileSync('./output/team.html', main);
+            fs.writeFileSync('./dist/team.html', main);
 
             console.log("The team.html has been generated in output");
         }
