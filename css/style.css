@@ -1,11 +1,11 @@
 body{
-    background-color: #262626;
+    background-color: #eac1f9;
     text-align: center;
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Courier New', Courier, monospace
 }
 
 #Company{
-    background-color: #38a9bd;
+    background-color: #9c38bd;
     color: white;
     font-size: 54px;
     padding: 5%;
@@ -15,7 +15,7 @@ body{
 .card {
     padding-top: 20px;
     margin: 10px 0 20px 0;
-    background-color: rgba(178, 188, 190, 0.2);
+    background-color: rgba(193, 122, 207, 0.2);
     border-top-width: 0;
     border-bottom-width: 2px;
     -webkit-border-radius: 3px;
@@ -31,14 +31,14 @@ body{
 
 .card .card-heading {
     margin: 0;
-    font-size: 36px;
+    font-size: 40px;
     line-height: 42px;
-    color: #d4d0d0;
+    color: #ffffff;
     
 }
 
 .role{
-    color: #d4d0d0;
+    color: #ffffff;
     font-size: 32px;
 }
 
@@ -52,8 +52,8 @@ body{
     margin: 8px 14px 0 14px;
     font-size: 24px;
     line-height: 28px;
-    color: #5f5e5e;
-    background-color: #3a3a3a;
+    color: #7d2b67;
+    background-color: #7d2b67;
     padding-bottom: 20px;
 }
 
